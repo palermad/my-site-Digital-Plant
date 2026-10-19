@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Plant — платформа цифрового производства</title>
+<meta name="description" content="Digital Plant: сбор данных с оборудования, цифровой двойник линии, аналитика потерь и рабочие места диспетчера, мастера и технолога.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">К основному содержанию</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">Digital Plant <span>платформа</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button>
+    <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+      <a href="index.html" aria-current="page">Обзор</a>
+      <a href="platform.html">Платформа</a>
+      <a href="implementation.html">Внедрение</a>
+      <a href="cases.html">Практика</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="band hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Цифровое производство</span>
+        <h1>Цифровой двойник завода: от датчика до решения мастера</h1>
+        <p class="lede">Собираем сигналы с оборудования, приводим их к единой модели линии и показываем людям на смене то, что можно исправить сегодня: простои, отклонения режима, потери и узкие места.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="platform.html">Как устроена платформа</a>
+          <a class="btn btn-ghost" href="implementation.html">Как проходит внедрение</a>
+        </div>
+        <p class="hero-note">OPC UA · Modbus TCP · MQTT · SNMP · SQL · REST</p>
+      </div>
+      <div>
+        <dl class="fact-list">
+          <dt>Контур данных</dt>
+          <dd>Оборудование → шлюзы на площадке → платформа и цифровой двойник → рабочие места</dd>
+          <dt>Начало работы</dt>
+          <dd>Пилот на одной линии или участке, без остановки производства на монтаж</dd>
+          <dt>Кому нужен результат</dt>
+          <dd>Диспетчеру, мастеру смены, технологу, службе главного механика и руководителю производства</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <h2>Что меняется на производстве</h2>
+      <p class="section-intro">Платформа не заменяет АСУ ТП и не управляет станками. Её задача — сделать состояние линии измеримым и передать это знание тем, кто принимает решения в смене.</p>
+      <div class="cols-3">
+        <div class="card reveal">
+          <h3>Простой перестаёт быть «неизвестным»</h3>
+          <p>Каждое отклонение привязано к единице оборудования, операции и времени. Вместо записи «линия стояла» появляется причина и её длительность.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Потери считаются, а не обсуждаются</h3>
+          <p>Сигналы складываются в показатели загрузки, ритма и брака по смене. Спорные цифры заменяются общей картиной, с которой согласны и цех, и службы.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Регламент работает без напоминаний</h3>
+          <p>Отклонения от нормы превращаются в оповещения по заданным правилам: кто получает, когда и что должен сделать. История реакций сохраняется.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Как устроен контур</h2>
+      <p class="section-intro">Четыре звена, и у каждого своя ответственность. Выберите звено, чтобы увидеть, что на нём происходит и какие данные идут дальше.</p>
+
+      <div class="chain" role="group" aria-label="Звенья контура данных">
+        <button class="chain-node" type="button" aria-pressed="true"
+          data-desc="Ток, вибрация, температура, давление, расход, счётчики годной продукции и состояние узлов. Подключение по открытым протоколам, без вмешательства в логику станка."
+          data-out="На выходе: сырые теги с метками времени">
+          <span class="chain-num">01</span>
+          <span class="chain-title">Датчики и оборудование</span>
+          <span class="chain-label">Источник сигнала</span>
+        </button>
+        <button class="chain-node" type="button" aria-pressed="false"
+          data-desc="Сбор на площадке, буферизация при обрыве связи, приведение тегов к единым именам и единицам измерения, отсечение мусора и дублей."
+          data-out="На выходе: выровненные ряды с одинаковым шагом по времени">
+          <span class="chain-num">02</span>
+          <span class="chain-title">Шлюзы на площадке</span>
+          <span class="chain-label">Сбор и нормализация</span>
+        </button>
+        <button class="chain-node" type="button" aria-pressed="false"
+          data-desc="Единая модель линии: состав оборудования, связи между агрегатами, операции, нормы и режимы. Сигналы привязываются к физическому объекту и к тому, что он делает."
+          data-out="На выходе: цифровой двойник линии и рассчитанные показатели">
+          <span class="chain-num">03</span>
+          <span class="chain-title">Платформа</span>
+          <span class="chain-label">Модель и расчёт</span>
+        </button>
+        <button class="chain-node" type="button" aria-pressed="false"
+          data-desc="Панели для диспетчера, мастера и технолога, оповещения по правилам, сменные отчёты и выгрузки для инженерных служб и руководства."
+          data-out="На выходе: действия в смене и основания для решений">
+          <span class="chain-num">04</span>
+          <span class="chain-title">Рабочие места</span>
+          <span class="chain-label">Решения и отчёты</span>
+        </button>
+      </div>
+
+      <div class="chain-panel" aria-live="polite">
+        <p>Ток, вибрация, температура, давление, расход, счётчики годной продукции и состояние узлов. Подключение по открытым протоколам, без вмешательства в логику станка.</p>
+        <span class="chains-out">На выходе: сырые теги с метками времени</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <h2>Два пути: пилот и полный контур</h2>
+      <p class="section-intro">Начинать с завода целиком не обязательно и часто вредно: слишком много решений принимается вслепую. Пилот на одной линии проверяет и данные, и пользу.</p>
+      <div class="cols-2">
+        <div class="card">
+          <h3>Пилот на одной линии</h3>
+          <ul>
+            <li>Одна линия или участок с понятным владельцем процесса</li>
+            <li>Минимальный набор сигналов под конкретный вопрос смены</li>
+            <li>Ограниченный круг пользователей: мастер и диспетчер</li>
+            <li>Результат: проверенная модель данных и решение о развитии</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Полный контур</h3>
+          <ul>
+            <li>Все линии участка или цеха в единой модели</li>
+            <li>Сводные показатели, правила оповещений, сменные отчёты</li>
+            <li>Роли для технолога, механика и руководителя производства</li>
+            <li>Результат: управление по данным на всём горизонте смены</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band cta-band">
+    <div class="wrap">
+      <div>
+        <h2>Посмотрите, из чего собрана платформа</h2>
+        <p>Модули, протоколы, модель данных и границы применимости — на странице платформы.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="platform.html">Модули и архитектура</a>
+        <a class="btn btn-ghost" href="contacts.html">Задать вопрос</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>Digital Plant</h3>
+        <p>Платформа цифрового производства: сбор данных с оборудования, цифровой двойник линии, аналитика потерь и рабочие места диспетчера, мастера и технолога.</p>
+      </div>
+      <div>
+        <h3>Разделы</h3>
+        <ul>
+          <li><a href="index.html">Обзор</a></li>
+          <li><a href="platform.html">Платформа</a></li>
+          <li><a href="implementation.html">Внедрение</a></li>
+          <li><a href="cases.html">Практика</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Важно знать</h3>
+        <ul>
+          <li>Первый шаг — пилот на одной линии</li>
+          <li>Данные остаются на вашей площадке</li>
+          <li>Открытые протоколы, без вендорной привязки</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Демонстрационный сайт проекта Digital Plant. Тексты и контакты — заготовки для наполнения.</span>
+      <span>Исходный код: <a href="https://github.com/palermad/my-site-Digital-Plant">github.com/palermad/my-site-Digital-Plant</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
