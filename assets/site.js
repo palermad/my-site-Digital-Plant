@@ -11,40 +11,38 @@
     });
   }
 
-  var chain = document.querySelector(".chain");
+  var tabsRoot = document.querySelector(".tabs");
 
-  if (chain) {
-    var nodes = Array.prototype.slice.call(chain.querySelectorAll(".chain-node"));
-    var panelText = document.querySelector(".chain-panel p");
-    var panelOut = document.querySelector(".chain-panel .chains-out");
+  if (tabsRoot) {
+    var tabs = Array.prototype.slice.call(tabsRoot.querySelectorAll('[role="tab"]'));
+    var panels = Array.prototype.slice.call(tabsRoot.querySelectorAll('[role="tabpanel"]'));
 
-    function select(node) {
-      nodes.forEach(function (item) {
-        item.setAttribute("aria-pressed", item === node ? "true" : "false");
+    function activate(tab) {
+      tabs.forEach(function (item) {
+        var selected = item === tab;
+        item.setAttribute("aria-selected", selected ? "true" : "false");
+        item.setAttribute("tabindex", selected ? "0" : "-1");
       });
-      if (panelText) {
-        panelText.textContent = node.getAttribute("data-desc") || "";
-      }
-      if (panelOut) {
-        panelOut.textContent = node.getAttribute("data-out") || "";
-      }
+      panels.forEach(function (panel) {
+        panel.hidden = panel.id !== tab.getAttribute("aria-controls");
+      });
     }
 
-    nodes.forEach(function (node, index) {
-      node.addEventListener("click", function () {
-        select(node);
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener("click", function () {
+        activate(tab);
       });
-      node.addEventListener("keydown", function (event) {
+      tab.addEventListener("keydown", function (event) {
         var next = null;
         if (event.key === "ArrowRight") {
-          next = nodes[index + 1] || nodes[0];
+          next = tabs[(index + 1) % tabs.length];
         } else if (event.key === "ArrowLeft") {
-          next = nodes[index - 1] || nodes[nodes.length - 1];
+          next = tabs[(index - 1 + tabs.length) % tabs.length];
         }
         if (next) {
           event.preventDefault();
           next.focus();
-          select(next);
+          activate(next);
         }
       });
     });
