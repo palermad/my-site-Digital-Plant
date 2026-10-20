@@ -590,118 +590,148 @@ td { color: var(--muted); }
   color: var(--muted);
 }
 
-/* ---------- демонстрация платформы ---------- */
+/* ---------- экран платформы (статичный макет) ---------- */
 
-.demo {
+@font-face {
+  font-family: "Rubik";
+  src: url("fonts/Rubik-Variable.woff2") format("woff2-variations");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.qms {
+  --q-blue: #4057ec;
+  --q-blue-50: #eceffe;
+  --q-blue-40: #f7f8ff;
+  --q-ink: #2f2f2f;
+  --q-muted: #737373;
+  --q-line: #dbdbdb;
+  font-family: "Rubik", "Segoe UI", system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--q-ink);
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
-  background: #060e1c;
-  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
 }
 
-.demo-bar {
+.qms-figure { margin: 0; }
+
+.qms-top {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--line);
-  background: rgba(8, 18, 35, 0.92);
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--q-line);
 }
-.demo-dots { display: flex; gap: 6px; }
-.demo-dots span { width: 9px; height: 9px; border-radius: 50%; background: #2b4a77; }
-.demo-url {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  color: var(--muted);
-  background: rgba(63, 124, 255, 0.08);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 4px 10px;
-}
-.demo-badge {
+.qms-logo { width: 32px; height: 32px; border-radius: 9px; flex: 0 0 auto; }
+.qms-brand { font-size: 14px; font-weight: 500; letter-spacing: -0.01em; }
+.qms-brand small { display: block; font-size: 11px; font-weight: 400; color: var(--q-muted); }
+.qms-top-right {
   margin-left: auto;
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  color: var(--accent-soft);
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 3px 8px;
-}
-
-.demo-body { display: grid; grid-template-columns: 232px minmax(0, 1fr); min-height: 400px; }
-
-.demo-side {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 14px;
-  border-right: 1px solid var(--line);
-  background: rgba(5, 11, 22, 0.7);
+  align-items: center;
+  gap: 10px;
+  font-size: 11.5px;
+  color: var(--q-muted);
 }
-.demo-side button {
-  font: inherit;
-  font-size: 0.9rem;
-  text-align: left;
-  padding: 10px 12px;
-  border: 0;
+.qms-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--q-blue-50);
+  color: var(--q-blue);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.qms-body { display: grid; grid-template-columns: 238px minmax(0, 1fr); }
+.qms-side { padding: 12px 10px; border-right: 1px solid var(--q-line); background: #fff; }
+.qms-side-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
   border-radius: 8px;
-  background: transparent;
-  color: var(--muted);
-  cursor: pointer;
+  font-size: 12.5px;
+  color: var(--q-ink);
 }
-.demo-side button:hover { color: #fff; background: rgba(63, 124, 255, 0.1); }
-.demo-side button[aria-pressed="true"] { color: #fff; background: rgba(63, 124, 255, 0.2); }
+.qms-side-item svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: var(--q-muted);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.qms-side-item.is-active { background: var(--q-blue-50); color: var(--q-blue); font-weight: 500; }
+.qms-side-item.is-active svg { stroke: var(--q-blue); }
 
-.demo-main { padding: 22px 24px 26px; }
-.demo-panel[hidden] { display: none; }
-.demo-panel h4 { margin: 0 0 6px; font-size: 1.04rem; }
-.demo-panel .sub { margin: 0 0 16px; color: var(--muted); font-size: 0.86rem; }
-
-.demo-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-.demo-table th, .demo-table td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; }
-.demo-table th { color: var(--muted); font-weight: 600; background: rgba(63, 124, 255, 0.08); }
-.demo-table td { color: var(--text); }
-
-.pill {
-  display: inline-block;
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  padding: 2px 8px;
-  border-radius: 20px;
-  border: 1px solid var(--line);
-  color: var(--accent-soft);
+.qms-main { padding: 18px 20px 22px; min-width: 0; }
+.qms-head { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px; }
+.qms-head h5 { margin: 0; font-size: 16px; font-weight: 500; letter-spacing: -0.01em; }
+.qms-head p { margin: 4px 0 0; font-size: 12px; color: var(--q-muted); }
+.qms-btn {
+  margin-left: auto;
+  flex: 0 0 auto;
+  background: var(--q-blue);
+  color: #fff;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 500;
   white-space: nowrap;
 }
-.pill--high { color: #ff9c9c; border-color: #5a2530; }
-.pill--mid { color: #ffd48a; border-color: #584521; }
-.pill--ok { color: #8ce0b0; border-color: #1f4a3a; }
 
-.demo-list { list-style: none; margin: 0; padding: 0; }
-.demo-list li {
+.qms-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.qms-table th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--q-muted);
+  padding: 9px 10px;
+  background: var(--q-blue-40);
+  border-bottom: 1px solid var(--q-line);
+  white-space: nowrap;
+}
+.qms-table td {
+  padding: 10px;
+  color: var(--q-ink);
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+.qms-table tbody tr:last-child td { border-bottom: 0; }
+.qms-op { display: block; font-family: var(--mono); font-size: 11px; color: var(--q-muted); }
+
+.qms-pill {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.qms-pill--high { background: #ffe1e1; color: #da3d3d; }
+.qms-pill--mid { background: #fff1df; color: #a86500; }
+.qms-pill--ok { background: #e6f6ec; color: #16733a; }
+
+.qms-foot {
   display: flex;
-  gap: 14px;
-  padding: 11px 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 0.89rem;
-  color: var(--text);
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding-top: 14px;
+  font-size: 11.5px;
+  color: var(--q-muted);
 }
-.demo-list li .k {
-  font-family: var(--mono);
-  font-size: 0.73rem;
-  color: var(--muted);
-  min-width: 104px;
-  flex: 0 0 auto;
-}
+.qms-foot b { font-weight: 500; color: var(--q-ink); }
 
-.demo-chat { display: flex; flex-direction: column; gap: 12px; }
-.demo-msg { padding: 12px 16px; border-radius: 10px; font-size: 0.89rem; max-width: 44em; border: 1px solid var(--line); }
-.demo-msg--q { background: rgba(63, 124, 255, 0.14); align-self: flex-end; }
-.demo-msg--a { background: rgba(255, 255, 255, 0.03); color: var(--muted); }
-.demo-msg .src { display: block; margin-top: 8px; font-family: var(--mono); font-size: 0.72rem; color: var(--accent-soft); }
-
-.demo-note { margin: 18px 0 0; font-size: 0.82rem; color: var(--muted); }
+.qms-note { margin: 16px 0 0; font-size: 0.82rem; color: var(--muted); }
 
 /* ---------- motion ---------- */
 
@@ -756,23 +786,22 @@ td { color: var(--muted); }
   .mod, .mod--wide { grid-column: auto; }
 }
 
-@media (max-width: 780px) {
-  .demo-body { grid-template-columns: minmax(0, 1fr); }
-  .demo-side {
-    flex-direction: row;
+@media (max-width: 900px) {
+  .qms-body { grid-template-columns: minmax(0, 1fr); }
+  .qms-side {
+    display: flex;
     gap: 6px;
     overflow-x: auto;
     border-right: 0;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--q-line);
   }
-  .demo-side button { white-space: nowrap; }
-  .demo-table { font-size: 0.8rem; }
-  .demo-list li { flex-direction: column; gap: 4px; }
-  .demo-list li .k { min-width: 0; }
+  .qms-side-item { white-space: nowrap; }
 }
 
-@media (max-width: 520px) {
-  .mods { grid-template-columns: minmax(0, 1fr); }
-  .demo-main { padding: 18px 14px 20px; }
-  .demo-table th:nth-child(2), .demo-table td:nth-child(2) { display: none; }
+@media (max-width: 560px) {
+  .qms-main { padding: 14px 12px 18px; }
+  .qms-top { padding: 10px 12px; }
+  .qms-top-right span:first-child { display: none; }
+  .qms-table th:nth-child(3), .qms-table td:nth-child(3),
+  .qms-table th:nth-child(4), .qms-table td:nth-child(4) { display: none; }
 }

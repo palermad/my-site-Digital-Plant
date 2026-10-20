@@ -48,24 +48,6 @@
     });
   }
 
-  var demo = document.querySelector(".demo");
-
-  if (demo) {
-    var demoButtons = Array.prototype.slice.call(demo.querySelectorAll(".demo-side button"));
-    var demoPanels = Array.prototype.slice.call(demo.querySelectorAll(".demo-panel"));
-
-    demoButtons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        demoButtons.forEach(function (item) {
-          item.setAttribute("aria-pressed", item === button ? "true" : "false");
-        });
-        demoPanels.forEach(function (panel) {
-          panel.hidden = panel.id !== button.getAttribute("aria-controls");
-        });
-      });
-    });
-  }
-
   var revealItems = document.querySelectorAll(".reveal");
 
   if (revealItems.length && "IntersectionObserver" in window) {

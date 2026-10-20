@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Цифровая платформа СМК — Цифровой завод</title>
-<meta name="description" content="Цифровая платформа СМК: PFMA, DFMA, цифровой паспорт изделия, центр компетенций и цифровой ассистент. Демонстрация интерфейса платформы.">
+<meta name="description" content="Цифровая платформа СМК: PFMA, DFMA, цифровой паспорт изделия, центр компетенций и цифровой ассистент. Экран платформы и состав блоков.">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -32,7 +32,7 @@
       <h1>Цифровая платформа СМК</h1>
       <p class="lede">Платформа для процессов СМК: анализ рисков, паспорт изделия, обучение персонала и работа с документами — в одном контуре вместо разрозненных таблиц и папок.</p>
       <div class="actions" style="margin-top:26px">
-        <a class="btn btn-primary" href="#demo">Смотреть демонстрацию <span class="arrow">↓</span></a>
+        <a class="btn btn-primary" href="#demo">Смотреть экран платформы <span class="arrow">↓</span></a>
         <a class="btn btn-ghost" href="contacts.html">Обсудить внедрение</a>
       </div>
     </div>
@@ -112,102 +112,112 @@
   <section class="section section-soft" id="demo">
     <div class="wrap">
       <div class="section-head">
-        <h2>Демонстрация платформы</h2>
-        <p>Как выглядят рабочие экраны. Переключите блок в левом меню — увидите, с чем работает пользователь внутри каждого модуля.</p>
+        <h2>Экран платформы</h2>
+        <p>Так выглядит рабочее окно продукта: палитра, шрифт и логотип соответствуют платформе. Экран статичный, данные в примере условные.</p>
       </div>
 
-      <div class="demo">
-        <div class="demo-bar">
-          <span class="demo-dots" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span class="demo-url">qmsdigital.ru / demo</span>
-          <span class="demo-badge">ДЕМО</span>
-        </div>
-
-        <div class="demo-body">
-          <div class="demo-side" role="group" aria-label="Блоки демонстрации">
-            <button type="button" aria-pressed="true" aria-controls="demo-pfma">PFMA</button>
-            <button type="button" aria-pressed="false" aria-controls="demo-dfma">DFMA</button>
-            <button type="button" aria-pressed="false" aria-controls="demo-passport">Паспорт изделия</button>
-            <button type="button" aria-pressed="false" aria-controls="demo-competence">Центр компетенций</button>
-            <button type="button" aria-pressed="false" aria-controls="demo-assistant">Цифровой ассистент</button>
+      <figure class="qms-figure">
+        <div class="qms">
+          <div class="qms-top">
+            <img class="qms-logo" src="assets/platform-logo.svg" alt="">
+            <div class="qms-brand">Платформа для аудита<small>Цифровая платформа СМК</small></div>
+            <div class="qms-top-right">
+              <span>ООО «Цифровой завод»</span>
+              <span class="qms-avatar">АК</span>
+            </div>
           </div>
 
-          <div class="demo-main">
-            <div class="demo-panel" id="demo-pfma">
-              <h4>PFMA — анализ рисков процесса</h4>
-              <p class="sub">Линия сборки, операция 010–040</p>
-              <table class="demo-table">
-                <thead>
-                  <tr><th scope="col">Операция</th><th scope="col">Параметр</th><th scope="col">Риск</th><th scope="col">Действие</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>010 Подготовка</td><td>Геометрия</td><td><span class="pill pill--high">высокий</span></td><td>Контроль первой детали</td></tr>
-                  <tr><td>020 Сварка</td><td>Режим тока</td><td><span class="pill pill--mid">средний</span></td><td>Калибровка раз в смену</td></tr>
-                  <tr><td>030 Сборка узла</td><td>Момент затяжки</td><td><span class="pill pill--mid">средний</span></td><td>Ключ с ограничением</td></tr>
-                  <tr><td>040 Маркировка</td><td>Читаемость</td><td><span class="pill pill--ok">низкий</span></td><td>Проверка сканером</td></tr>
-                </tbody>
-              </table>
+          <div class="qms-body">
+            <div class="qms-side">
+              <div class="qms-side-item is-active">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2l5 2v4c0 3-2.4 5.2-5 6-2.6-.8-5-3-5-6V4l5-2z"/><path d="M5.6 8l1.7 1.7 3.2-3.4"/></svg>
+                PFMA
+              </div>
+              <div class="qms-side-item">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8l5 2.8v6.8l-5 2.8-5-2.8V4.6l5-2.8z"/><path d="M3 4.6l5 2.8 5-2.8"/><path d="M8 7.4v6.8"/></svg>
+                DFMA
+              </div>
+              <div class="qms-side-item">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 1.8h5l3 3v9.4H4z"/><path d="M9 1.8v3h3"/><path d="M6 8h4M6 10.6h4"/></svg>
+                Паспорт изделия
+              </div>
+              <div class="qms-side-item">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.2h4.6v9.6H2.5z"/><path d="M8.9 3.2h4.6v9.6H8.9z"/><path d="M7.1 3.2v9.6"/></svg>
+                Центр компетенций
+              </div>
+              <div class="qms-side-item">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.6 3.4h10.8v6.9H8.2L5.4 13v-2.7H2.6z"/></svg>
+                Цифровой ассистент
+              </div>
             </div>
 
-            <div class="demo-panel" id="demo-dfma" hidden>
-              <h4>DFMA — конструкция и технологичность</h4>
-              <p class="sub">Изделие «Корпус», версия 3</p>
-              <table class="demo-table">
-                <thead>
-                  <tr><th scope="col">Проверка</th><th scope="col">Замечание</th><th scope="col">Статус</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Собираемость</td><td>6 элементов, 4 соединения</td><td><span class="pill pill--ok">принято</span></td></tr>
-                  <tr><td>Крепёж</td><td>Унифицирован под один размер</td><td><span class="pill pill--ok">принято</span></td></tr>
-                  <tr><td>Посадка</td><td>Допуск требует уточнения</td><td><span class="pill pill--mid">на доработке</span></td></tr>
-                  <tr><td>Доступ инструмента</td><td>Изменена последовательность сборки</td><td><span class="pill pill--ok">принято</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="demo-panel" id="demo-passport" hidden>
-              <h4>Цифровой паспорт изделия</h4>
-              <p class="sub">Партия 2210, дата контроля 14.10</p>
-              <ul class="demo-list">
-                <li><span class="k">Наименование</span>Корпус редуктора, исполнение Б</li>
-                <li><span class="k">Материал</span>Алюминиевый сплав, плавка 47-22</li>
-                <li><span class="k">Контроль</span>Протокол 2210-К, годен</li>
-                <li><span class="k">История</span>12.10 — версия 3, 14.10 — результаты контроля</li>
-                <li><span class="k">Документы</span>Паспорт изделия, протокол контроля, акт приёмки</li>
-              </ul>
-            </div>
-
-            <div class="demo-panel" id="demo-competence" hidden>
-              <h4>Центр компетенций</h4>
-              <p class="sub">Курсы сотрудника, темы и результаты тестов</p>
-              <table class="demo-table">
-                <thead>
-                  <tr><th scope="col">Курс</th><th scope="col">Темы</th><th scope="col">Тест</th><th scope="col">Результат</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Вводный курс по СМК</td><td>4</td><td>10 вопросов</td><td><span class="pill pill--ok">9 из 10</span></td></tr>
-                  <tr><td>PFMA на практике</td><td>3</td><td>8 вопросов</td><td><span class="pill pill--mid">не пройден</span></td></tr>
-                  <tr><td>Работа с паспортом изделия</td><td>2</td><td>6 вопросов</td><td><span class="pill">доступен</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="demo-panel" id="demo-assistant" hidden>
-              <h4>Цифровой ассистент</h4>
-              <p class="sub">Работа с документами предприятия</p>
-              <div class="demo-chat">
-                <div class="demo-msg demo-msg--q">Какие документы нужны для приёмки партии 2210?</div>
-                <div class="demo-msg demo-msg--a">
-                  В карточке партии 2210 указаны: паспорт изделия, протокол контроля 2210-К и акт приёмки. Все три документа загружены 14.10.
-                  <span class="src">Найдено в: Паспорт изделия / Партия 2210</span>
+            <div class="qms-main">
+              <div class="qms-head">
+                <div>
+                  <h5>PFMA — анализ рисков процесса</h5>
+                  <p>Линия сборки · операции 010–040 · версия 2</p>
                 </div>
+                <span class="qms-btn">Добавить операцию</span>
+              </div>
+
+              <table class="qms-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Операция</th>
+                    <th scope="col">Параметр</th>
+                    <th scope="col">Тяжесть</th>
+                    <th scope="col">Вероятность</th>
+                    <th scope="col">Риск</th>
+                    <th scope="col">Действие</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="qms-op">010</span>Подготовка заготовки</td>
+                    <td>Геометрия</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td><span class="qms-pill qms-pill--high">высокий</span></td>
+                    <td>Контроль первой детали</td>
+                  </tr>
+                  <tr>
+                    <td><span class="qms-op">020</span>Сварка</td>
+                    <td>Режим тока</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td><span class="qms-pill qms-pill--mid">средний</span></td>
+                    <td>Калибровка раз в смену</td>
+                  </tr>
+                  <tr>
+                    <td><span class="qms-op">030</span>Сборка узла</td>
+                    <td>Момент затяжки</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td><span class="qms-pill qms-pill--mid">средний</span></td>
+                    <td>Ключ с ограничением</td>
+                  </tr>
+                  <tr>
+                    <td><span class="qms-op">040</span>Маркировка</td>
+                    <td>Читаемость</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td><span class="qms-pill qms-pill--ok">низкий</span></td>
+                    <td>Проверка сканером</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="qms-foot">
+                <span>Операций: <b>4</b></span>
+                <span>Высокий риск: <b>1</b></span>
+                <span>Действий в плане: <b>3</b></span>
+                <span>Обновлено: <b>14.10</b></span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <p class="demo-note">Данные в демонстрации условные, экран упрощён и не повторяет рабочее окно платформы. Полноценный показ интерфейса — по запросу.</p>
+        <figcaption class="qms-note">Экран «PFMA — анализ рисков процесса». Демонстрационные данные; интерфейс упрощён по сравнению с рабочей версией.</figcaption>
+      </figure>
     </div>
   </section>
 
