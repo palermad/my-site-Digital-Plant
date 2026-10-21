@@ -778,6 +778,14 @@ td { color: var(--muted); }
 .team-photo--empty small { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; }
 
 .team-card h3 { margin: 0 0 6px; font-size: 1.04rem; line-height: 1.32; letter-spacing: -0.01em; }
+.team-role {
+  display: block;
+  margin: 0 0 10px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--accent-soft);
+}
 .team-card p { margin: 0; color: var(--muted); font-size: 0.93rem; }
 
 /* ---------- motion ---------- */
