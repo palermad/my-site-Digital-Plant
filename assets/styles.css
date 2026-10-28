@@ -638,8 +638,6 @@ td { color: var(--muted); }
   color: var(--text);
 }
 
-.flip-hint { margin: 18px 0 0; font-size: 0.86rem; color: var(--muted); }
-
 @media (prefers-reduced-motion: reduce) {
   .flip-inner { transition: none; }
 }
