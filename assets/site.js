@@ -48,6 +48,17 @@
     });
   }
 
+  var flips = document.querySelectorAll(".flip");
+
+  if (flips.length) {
+    Array.prototype.forEach.call(flips, function (card) {
+      card.addEventListener("click", function () {
+        var on = card.classList.toggle("is-flipped");
+        card.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    });
+  }
+
   var revealItems = document.querySelectorAll(".reveal");
 
   if (revealItems.length && "IntersectionObserver" in window) {

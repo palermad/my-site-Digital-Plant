@@ -551,43 +551,106 @@ td { color: var(--muted); }
 .page-head h1 { margin: 0 0 16px; font-size: clamp(1.85rem, 4.2vw, 2.8rem); line-height: 1.08; letter-spacing: -0.03em; }
 .page-head p.lede { margin: 0; color: var(--muted); max-width: 44em; font-size: 1.05rem; }
 
-/* ---------- модули платформы ---------- */
+/* ---------- модули платформы: карточки-перевороты ---------- */
 
 .mods {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
 
-.mod {
-  grid-column: span 2;
+.flip {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 232px;
+  aspect-ratio: 5 / 4;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  perspective: 1200px;
+}
+
+.flip-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.flip:hover .flip-inner,
+.flip:focus-visible .flip-inner,
+.flip.is-flipped .flip-inner { transform: rotateY(180deg); }
+
+.flip-face {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: linear-gradient(170deg, rgba(14, 33, 64, 0.8), rgba(7, 15, 28, 0.8));
-  padding: 26px 26px 24px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
-.mod--wide { grid-column: span 3; }
 
-.mod-key {
+.flip-front { background: linear-gradient(165deg, rgba(16, 38, 72, 0.95), rgba(6, 13, 25, 0.95)); }
+
+.flip-art { position: absolute; inset: 0; opacity: 0.5; pointer-events: none; }
+.flip-art svg { display: block; width: 100%; height: 100%; }
+
+.flip-name {
+  position: relative;
+  font-size: 1.14rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  justify-content: flex-start;
+  gap: 8px;
+  background: linear-gradient(165deg, #14305c, #071328);
+}
+.flip-back-title {
+  display: block;
   font-family: var(--mono);
   font-size: 0.74rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent-soft);
+  font-weight: 600;
 }
-.mod h3 { margin: 10px 0 10px; font-size: 1.18rem; letter-spacing: -0.015em; }
-.mod p { margin: 0 0 14px; color: var(--muted); font-size: 0.95rem; }
-.mod ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.92rem; }
-.mod li { margin-bottom: 6px; }
-.mod-foot {
-  margin-top: auto;
-  padding-top: 16px;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
-  color: var(--muted);
+.flip-back-text {
+  display: block;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.flip-hint { margin: 18px 0 0; font-size: 0.86rem; color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-inner { transition: none; }
+}
+
+@media (max-width: 860px) {
+  .mods { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 620px) {
+  .mods { grid-template-columns: minmax(0, 1fr); }
+  .flip { aspect-ratio: auto; min-height: 250px; }
 }
 
 /* ---------- экран платформы (статичный макет) ---------- */
@@ -834,11 +897,6 @@ td { color: var(--muted); }
   .cta-inner { flex-direction: column; align-items: flex-start; }
   .tab-panel { padding: 24px 20px 26px; }
   .dir-card { padding: 26px 22px 24px; }
-}
-
-@media (max-width: 1000px) {
-  .mods { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .mod, .mod--wide { grid-column: auto; }
 }
 
 @media (max-width: 900px) {
