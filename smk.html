@@ -201,112 +201,37 @@
   <section class="section section-soft" id="demo">
     <div class="wrap">
       <div class="section-head">
-        <h2>Экран платформы</h2>
-        <p>Так выглядит рабочее окно продукта: палитра, шрифт и логотип соответствуют платформе. Экран статичный, данные в примере условные.</p>
+        <h2>Экраны платформы</h2>
+        <p>Три рабочих экрана продукта: цифровой ассистент, модель процессов СМК и центр компетенций. Листайте стрелками, точками или свайпом.</p>
       </div>
 
-      <figure class="qms-figure">
-        <div class="qms">
-          <div class="qms-top">
-            <img class="qms-logo" src="assets/platform-logo.svg" alt="">
-            <div class="qms-brand">Платформа для аудита<small>Цифровая платформа СМК</small></div>
-            <div class="qms-top-right">
-              <span>ООО «Цифровой завод»</span>
-              <span class="qms-avatar">АК</span>
-            </div>
-          </div>
-
-          <div class="qms-body">
-            <div class="qms-side">
-              <div class="qms-side-item is-active">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2l5 2v4c0 3-2.4 5.2-5 6-2.6-.8-5-3-5-6V4l5-2z"/><path d="M5.6 8l1.7 1.7 3.2-3.4"/></svg>
-                PFMA
-              </div>
-              <div class="qms-side-item">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8l5 2.8v6.8l-5 2.8-5-2.8V4.6l5-2.8z"/><path d="M3 4.6l5 2.8 5-2.8"/><path d="M8 7.4v6.8"/></svg>
-                DFMA
-              </div>
-              <div class="qms-side-item">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 1.8h5l3 3v9.4H4z"/><path d="M9 1.8v3h3"/><path d="M6 8h4M6 10.6h4"/></svg>
-                Паспорт изделия
-              </div>
-              <div class="qms-side-item">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.2h4.6v9.6H2.5z"/><path d="M8.9 3.2h4.6v9.6H8.9z"/><path d="M7.1 3.2v9.6"/></svg>
-                Центр компетенций
-              </div>
-              <div class="qms-side-item">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.6 3.4h10.8v6.9H8.2L5.4 13v-2.7H2.6z"/></svg>
-                Цифровой ассистент
-              </div>
-            </div>
-
-            <div class="qms-main">
-              <div class="qms-head">
-                <div>
-                  <h5>PFMA — анализ рисков процесса</h5>
-                  <p>Линия сборки · операции 010–040 · версия 2</p>
-                </div>
-                <span class="qms-btn">Добавить операцию</span>
-              </div>
-
-              <table class="qms-table">
-                <thead>
-                  <tr>
-                    <th scope="col">Операция</th>
-                    <th scope="col">Параметр</th>
-                    <th scope="col">Тяжесть</th>
-                    <th scope="col">Вероятность</th>
-                    <th scope="col">Риск</th>
-                    <th scope="col">Действие</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="qms-op">010</span>Подготовка заготовки</td>
-                    <td>Геометрия</td>
-                    <td>4</td>
-                    <td>3</td>
-                    <td><span class="qms-pill qms-pill--high">высокий</span></td>
-                    <td>Контроль первой детали</td>
-                  </tr>
-                  <tr>
-                    <td><span class="qms-op">020</span>Сварка</td>
-                    <td>Режим тока</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td><span class="qms-pill qms-pill--mid">средний</span></td>
-                    <td>Калибровка раз в смену</td>
-                  </tr>
-                  <tr>
-                    <td><span class="qms-op">030</span>Сборка узла</td>
-                    <td>Момент затяжки</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td><span class="qms-pill qms-pill--mid">средний</span></td>
-                    <td>Ключ с ограничением</td>
-                  </tr>
-                  <tr>
-                    <td><span class="qms-op">040</span>Маркировка</td>
-                    <td>Читаемость</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td><span class="qms-pill qms-pill--ok">низкий</span></td>
-                    <td>Проверка сканером</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div class="qms-foot">
-                <span>Операций: <b>4</b></span>
-                <span>Высокий риск: <b>1</b></span>
-                <span>Действий в плане: <b>3</b></span>
-                <span>Обновлено: <b>14.10</b></span>
-              </div>
-            </div>
+      <div class="shots">
+        <div class="shots-viewport" tabindex="0" role="group" aria-label="Экраны платформы: листайте стрелками или свайпом">
+          <div class="shots-track">
+            <figure class="shot">
+              <img src="assets/platform/shot-1.png" alt="Экран платформы: редактор курса в центре компетенций" width="1920" height="956">
+              <figcaption>Центр компетенций: темы, тесты и срок доступа к курсу.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="assets/platform/shot-2.png" alt="Экран платформы: рабочий стол цифрового ассистента" width="1920" height="942">
+              <figcaption>Цифровой ассистент: документы и инструменты СМК в одном дереве.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="assets/platform/shot-3.png" alt="Экран платформы: модель процессов СМК" width="1920" height="954">
+              <figcaption>Модель процессов СМК: шаблоны и матрица соответствия требованиям.</figcaption>
+            </figure>
           </div>
         </div>
-        <figcaption class="qms-note">Экран «PFMA — анализ рисков процесса». Демонстрационные данные; интерфейс упрощён по сравнению с рабочей версией.</figcaption>
-      </figure>
+        <div class="shots-bar">
+          <button class="shots-btn" type="button" data-dir="-1" aria-label="Предыдущий экран">←</button>
+          <div class="shots-dots" role="tablist" aria-label="Выбор экрана">
+            <button type="button" role="tab" aria-selected="true" aria-label="Экран 1"></button>
+            <button type="button" role="tab" aria-selected="false" aria-label="Экран 2"></button>
+            <button type="button" role="tab" aria-selected="false" aria-label="Экран 3"></button>
+          </div>
+          <button class="shots-btn" type="button" data-dir="1" aria-label="Следующий экран">→</button>
+        </div>
+      </div>
     </div>
   </section>
 
