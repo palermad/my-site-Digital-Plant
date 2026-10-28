@@ -776,6 +776,50 @@ td { color: var(--muted); }
 }
 .team-card p { margin: 0; color: var(--muted); font-size: 0.93rem; }
 
+/* ---------- перечень услуг ---------- */
+
+.svc-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.svc-group {
+  border-left: 1px solid var(--line);
+  padding-left: 20px;
+}
+.svc-group h3 { margin: 0 0 14px; font-size: 1.06rem; letter-spacing: -0.01em; }
+
+.svc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: svc;
+}
+.svc-list li {
+  position: relative;
+  counter-increment: svc;
+  padding-left: 30px;
+  margin-bottom: 11px;
+  font-size: 0.94rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.svc-list li::before {
+  content: counter(svc, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-family: var(--mono);
+  font-size: 0.73rem;
+  color: var(--accent-soft);
+}
+
+@media (max-width: 900px) {
+  .svc-groups { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .svc-group { border-left: 0; border-top: 1px solid var(--line); padding: 18px 0 0; }
+}
+
 /* ---------- motion ---------- */
 
 @media (prefers-reduced-motion: no-preference) {
