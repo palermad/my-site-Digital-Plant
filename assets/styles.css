@@ -917,9 +917,12 @@ td { color: var(--muted); }
 }
 .solution-text p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.6; }
 
-.solution-shots .shots-viewport { box-shadow: none; }
+.solution-media { display: flex; justify-content: center; }
+
+.solution-shots { width: fit-content; max-width: 100%; }
+.solution-shots .shots-viewport { padding: 12px; box-shadow: none; }
 .solution-shots .shot { justify-content: center; }
-.solution-shots .shot img { width: auto; max-width: 100%; height: auto; margin: 0 auto; }
+.solution-shots .shot img { display: block; width: 100%; height: auto; margin: 0 auto; }
 .solution-shots .shots-bar { margin-top: 14px; }
 .solution-shots .shots-btn { width: 38px; height: 38px; }
 
