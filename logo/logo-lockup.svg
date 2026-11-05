@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 160" width="660" height="160" role="img" aria-label="Цифровой завод — логотип">
+  <defs>
+    <linearGradient id="cz-grad-l" x1="10" y1="6" x2="86" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5c8dff" />
+      <stop offset="0.55" stop-color="#3f7cff" />
+      <stop offset="1" stop-color="#1b3a86" />
+    </linearGradient>
+    <g id="cz-arm-l" transform="translate(-3,0)">
+      <rect x="14" y="70" width="32" height="8" rx="3" />
+      <rect x="22" y="52" width="16" height="18" rx="2" />
+      <circle cx="30" cy="52" r="9" />
+      <line x1="30" y1="52" x2="58" y2="26" stroke-width="13" stroke-linecap="round" />
+      <circle cx="58" cy="26" r="7" />
+      <line x1="58" y1="26" x2="70" y2="18" stroke-width="6" stroke-linecap="round" />
+      <line x1="58" y1="26" x2="70" y2="34" stroke-width="6" stroke-linecap="round" />
+    </g>
+  </defs>
+
+  <g transform="translate(0, 32)">
+    <rect width="96" height="96" rx="24" fill="url(#cz-grad-l)" />
+    <use href="#cz-arm-l" fill="#ffffff" stroke="#ffffff" />
+    <g fill="#8fd6ff" transform="translate(-3,0)">
+      <rect x="74" y="17" width="8" height="8" rx="1.5" />
+      <rect x="81" y="26" width="6" height="6" rx="1" opacity="0.85" />
+      <rect x="85" y="34" width="4" height="4" rx="1" opacity="0.65" />
+    </g>
+  </g>
+
+  <g fill="currentColor">
+    <text x="128" y="84" font-family="Rubik, 'Segoe UI', system-ui, sans-serif" font-size="42" font-weight="600" letter-spacing="0.5">ЦИФРОВОЙ ЗАВОД</text>
+    <text x="130" y="118" font-family="Rubik, 'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="400" letter-spacing="2.6" opacity="0.6">РОБОТИЗАЦИЯ · ЦИФРОВАЯ ПЛАТФОРМА СМК</text>
+  </g>
+</svg>

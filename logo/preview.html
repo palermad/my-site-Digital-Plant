@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Логотип — ООО «Цифровой завод»</title>
+<style>
+  @font-face {
+    font-family: "Rubik";
+    src: url("fonts/Rubik.woff2") format("woff2-variations");
+    font-weight: 300 900;
+    font-display: swap;
+  }
+  :root {
+    --navy: #050b16;
+    --blue: #3f7cff;
+    --ink: #16202e;
+    --muted: #737373;
+    --line: #e3e8ef;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px;
+    background: #eef1f6;
+    font-family: "Rubik", "Segoe UI", system-ui, sans-serif;
+    color: var(--ink);
+  }
+  .sheet { max-width: 1120px; margin: 0 auto; }
+  h1 { margin: 0 0 6px; font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+  .sub { margin: 0 0 28px; color: var(--muted); font-size: 14px; max-width: 62em; line-height: 1.55; }
+
+  .panel {
+    border-radius: 16px;
+    padding: 34px 36px;
+    margin-bottom: 20px;
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+  .panel--dark { background: var(--navy); border-color: #14243d; color: #eaf0fa; }
+
+  .row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 34px; }
+  .cell { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+  .cap {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-family: ui-monospace, Consolas, monospace;
+  }
+  .panel--dark .cap { color: #8ba0bd; }
+
+  .mark-xl { width: 192px; height: 192px; }
+  .mark-md { width: 48px; height: 48px; }
+  .mark-sm { width: 32px; height: 32px; }
+  .mark-xs { width: 16px; height: 16px; }
+
+  .lockup { width: 660px; max-width: 100%; height: auto; }
+
+  .palette { display: flex; gap: 12px; flex-wrap: wrap; }
+  .swatch { width: 132px; }
+  .chip { height: 56px; border-radius: 10px; border: 1px solid rgba(0,0,0,.08); }
+  .swatch b { display: block; margin-top: 8px; font-size: 12px; font-weight: 500; }
+  .swatch span { font-size: 11px; color: var(--muted); font-family: ui-monospace, Consolas, monospace; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="czg" x1="10" y1="6" x2="86" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5c8dff" />
+      <stop offset="0.55" stop-color="#3f7cff" />
+      <stop offset="1" stop-color="#1b3a86" />
+    </linearGradient>
+    <g id="cz-arm" transform="translate(-3,0)">
+      <rect x="14" y="70" width="32" height="8" rx="3" />
+      <rect x="22" y="52" width="16" height="18" rx="2" />
+      <circle cx="30" cy="52" r="9" />
+      <line x1="30" y1="52" x2="58" y2="26" stroke-width="13" stroke-linecap="round" />
+      <circle cx="58" cy="26" r="7" />
+      <line x1="58" y1="26" x2="70" y2="18" stroke-width="6" stroke-linecap="round" />
+      <line x1="58" y1="26" x2="70" y2="34" stroke-width="6" stroke-linecap="round" />
+    </g>
+    <g id="cz-bits" transform="translate(-3,0)">
+      <rect x="74" y="17" width="8" height="8" rx="1.5" />
+      <rect x="81" y="26" width="6" height="6" rx="1" opacity="0.85" />
+      <rect x="85" y="34" width="4" height="4" rx="1" opacity="0.65" />
+    </g>
+  </defs>
+</svg>
+
+<div class="sheet">
+  <h1>Логотип «Цифровой завод»</h1>
+  <p class="sub">Знак собран из двух смыслов: роботизированная рука (основание, шарнир, захват) и поток пикселей, который идёт из захвата — цифровизация данных. Обе части держатся на сетке 96×96, поэтому знак читается и в 16 px, и на баннере.</p>
+
+  <section class="panel">
+    <div class="row">
+      <div class="cell">
+        <svg class="mark-xl" viewBox="0 0 96 96" role="img" aria-label="Знак Цифрового завода">
+          <rect width="96" height="96" rx="24" fill="url(#czg)" />
+          <use href="#cz-arm" fill="#ffffff" stroke="#ffffff" />
+          <use href="#cz-bits" fill="#8fd6ff" />
+        </svg>
+        <span class="cap">Знак · 192 px</span>
+      </div>
+      <div class="cell">
+        <svg class="lockup" viewBox="0 0 660 160" role="img" aria-label="Цифровой завод — логотип" style="color:#16202e">
+          <g transform="translate(0, 32)">
+            <rect width="96" height="96" rx="24" fill="url(#czg)" />
+            <use href="#cz-arm" fill="#ffffff" stroke="#ffffff" />
+            <use href="#cz-bits" fill="#8fd6ff" />
+          </g>
+          <g fill="currentColor">
+            <text x="128" y="84" font-size="42" font-weight="600" letter-spacing="0.5">ЦИФРОВОЙ ЗАВОД</text>
+            <text x="130" y="118" font-size="14" letter-spacing="2.6" opacity="0.6">РОБОТИЗАЦИЯ · ЦИФРОВАЯ ПЛАТФОРМА СМК</text>
+          </g>
+        </svg>
+        <span class="cap">Горизонтальный лок-ап</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel panel--dark">
+    <div class="row">
+      <div class="cell">
+        <svg class="lockup" viewBox="0 0 660 160" role="img" aria-label="Цифровой завод на тёмном фоне" style="color:#f2f6fc">
+          <g transform="translate(0, 32)">
+            <rect width="96" height="96" rx="24" fill="url(#czg)" />
+            <use href="#cz-arm" fill="#ffffff" stroke="#ffffff" />
+            <use href="#cz-bits" fill="#8fd6ff" />
+          </g>
+          <g fill="currentColor">
+            <text x="128" y="84" font-size="42" font-weight="600" letter-spacing="0.5">ЦИФРОВОЙ ЗАВОД</text>
+            <text x="130" y="118" font-size="14" letter-spacing="2.6" opacity="0.6">РОБОТИЗАЦИЯ · ЦИФРОВАЯ ПЛАТФОРМА СМК</text>
+          </g>
+        </svg>
+        <span class="cap">Лок-ап · тёмный фон</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="row">
+      <div class="cell">
+        <svg class="mark-md" viewBox="0 0 96 96" role="img" aria-label="Знак 48 px">
+          <rect width="96" height="96" rx="24" fill="url(#czg)" />
+          <use href="#cz-arm" fill="#ffffff" stroke="#ffffff" />
+          <use href="#cz-bits" fill="#8fd6ff" />
+        </svg>
+        <span class="cap">48 px</span>
+      </div>
+      <div class="cell">
+        <svg class="mark-sm" viewBox="0 0 96 96" role="img" aria-label="Знак 32 px">
+          <rect width="96" height="96" rx="24" fill="url(#czg)" />
+          <use href="#cz-arm" fill="#ffffff" stroke="#ffffff" />
+          <use href="#cz-bits" fill="#8fd6ff" />
+        </svg>
+        <span class="cap">32 px</span>
+      </div>
+      <div class="cell">
+        <svg class="mark-xs" viewBox="0 0 96 96" role="img" aria-label="Знак 16 px">
+          <rect width="96" height="96" rx="24" fill="url(#czg)" />
+          <use href="#cz-arm" fill="#ffffff" stroke="#ffffff" />
+        </svg>
+        <span class="cap">16 px · favicon</span>
+      </div>
+      <div class="cell">
+        <svg class="mark-md" viewBox="0 0 96 96" style="color:#16202e" role="img" aria-label="Монохромный знак">
+          <use href="#cz-arm" fill="currentColor" stroke="currentColor" />
+          <use href="#cz-bits" fill="currentColor" opacity="0.55" />
+        </svg>
+        <span class="cap">Моно · светлый</span>
+      </div>
+      <div class="cell">
+        <svg class="mark-md" viewBox="0 0 96 96" style="color:#ffffff;background:#050b16;border-radius:8px" role="img" aria-label="Монохромный знак на тёмном">
+          <use href="#cz-arm" fill="currentColor" stroke="currentColor" />
+          <use href="#cz-bits" fill="currentColor" opacity="0.55" />
+        </svg>
+        <span class="cap">Моно · тёмный</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="palette">
+      <div class="swatch"><div class="chip" style="background:#3f7cff"></div><b>Акцент</b><span>#3F7CFF</span></div>
+      <div class="swatch"><div class="chip" style="background:#5c8dff"></div><b>Светлый</b><span>#5C8DFF</span></div>
+      <div class="swatch"><div class="chip" style="background:#1b3a86"></div><b>Глубокий</b><span>#1B3A86</span></div>
+      <div class="swatch"><div class="chip" style="background:#8fd6ff"></div><b>Цифровой</b><span>#8FD6FF</span></div>
+      <div class="swatch"><div class="chip" style="background:#050b16"></div><b>Тёмный фон</b><span>#050B16</span></div>
+    </div>
+  </section>
+</div>
+</body>
+</html>
