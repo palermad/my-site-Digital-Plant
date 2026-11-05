@@ -11,7 +11,7 @@
     });
   }
 
-  var tabRoots = document.querySelectorAll(".tabs, .dir-switch");
+  var tabRoots = document.querySelectorAll(".tabs");
 
   Array.prototype.forEach.call(tabRoots, function (root) {
     var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
@@ -46,6 +46,32 @@
         }
       });
     });
+  });
+
+  var dirSwitches = document.querySelectorAll(".dir-switch");
+
+  Array.prototype.forEach.call(dirSwitches, function (root) {
+    var slides = Array.prototype.slice.call(root.querySelectorAll(".dir-slide"));
+    var caption = root.querySelector(".dir-caption");
+    var index = 0;
+
+    function show(next) {
+      index = ((next % slides.length) + slides.length) % slides.length;
+      slides.forEach(function (slide, k) {
+        slide.hidden = k !== index;
+      });
+      if (caption) {
+        caption.textContent = slides[index].getAttribute("data-caption") || "";
+      }
+    }
+
+    Array.prototype.forEach.call(root.querySelectorAll(".dir-arrow"), function (arrow) {
+      arrow.addEventListener("click", function () {
+        show(index + (Number(arrow.getAttribute("data-step")) || 1));
+      });
+    });
+
+    show(0);
   });
 
   var carousel = document.querySelector(".shots");
