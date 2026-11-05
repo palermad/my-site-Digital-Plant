@@ -209,6 +209,8 @@ a:hover { color: #fff; }
   letter-spacing: -0.03em;
   font-weight: 700;
 }
+
+.hero-copy { max-width: 860px; }
 .hero h1 .thin { color: var(--accent-soft); display: block; }
 
 .hero p.lede {
@@ -896,6 +898,28 @@ td { color: var(--muted); }
 @media (max-width: 900px) {
   .svc-groups { grid-template-columns: minmax(0, 1fr); gap: 22px; }
   .svc-group { border-left: 0; border-top: 1px solid var(--line); padding: 18px 0 0; }
+}
+
+/* ---------- иллюстрации решений ---------- */
+
+.cells-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.cells-grid figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #0b1a30;
+}
+.cells-grid img { display: block; width: 100%; height: auto; }
+
+@media (max-width: 620px) {
+  .cells-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* ---------- motion ---------- */
