@@ -372,6 +372,8 @@ a:hover { color: #fff; }
 .steps h3 { margin: 0 0 8px; font-size: 1.02rem; }
 .steps p { margin: 0; color: var(--muted); font-size: 0.94rem; }
 
+.steps--six { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
 /* ---------- tabs ---------- */
 
 .tabs { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
