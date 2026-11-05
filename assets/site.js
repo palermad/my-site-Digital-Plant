@@ -11,11 +11,11 @@
     });
   }
 
-  var tabsRoot = document.querySelector(".tabs");
+  var tabRoots = document.querySelectorAll(".tabs, .dir-switch");
 
-  if (tabsRoot) {
-    var tabs = Array.prototype.slice.call(tabsRoot.querySelectorAll('[role="tab"]'));
-    var panels = Array.prototype.slice.call(tabsRoot.querySelectorAll('[role="tabpanel"]'));
+  Array.prototype.forEach.call(tabRoots, function (root) {
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('[role="tabpanel"]'));
 
     function activate(tab) {
       tabs.forEach(function (item) {
@@ -46,7 +46,7 @@
         }
       });
     });
-  }
+  });
 
   var carousel = document.querySelector(".shots");
 
