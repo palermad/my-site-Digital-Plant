@@ -219,15 +219,14 @@ a:hover { color: #fff; }
 }
 
 .hero-meta {
-  margin-top: 40px;
+  margin-top: 38px;
   padding-top: 22px;
   border-top: 1px solid var(--line-soft);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 30px;
-  font-family: var(--mono);
-  font-size: 0.79rem;
-  letter-spacing: 0.04em;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px 28px;
+  font-size: 0.94rem;
+  line-height: 1.45;
   color: var(--muted);
 }
 .hero-meta span::before {
@@ -866,6 +865,7 @@ td { color: var(--muted); }
   .cta-inner { flex-direction: column; align-items: flex-start; }
   .tab-panel { padding: 24px 20px 26px; }
   .dir-card { padding: 26px 22px 24px; }
+  .hero-meta { grid-template-columns: minmax(0, 1fr); gap: 9px; }
 }
 
 @media (max-width: 860px) {
