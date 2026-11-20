@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Цифровой завод">
+  <defs>
+    <linearGradient id="cz-grad" x1="56" y1="34" x2="148" y2="168" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d4ed8" />
+      <stop offset="0.55" stop-color="#4338ca" />
+      <stop offset="1" stop-color="#6d28d9" />
+    </linearGradient>
+  </defs>
+
+  <g fill="url(#cz-grad)">
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(0 100 100)" />
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(30 100 100)" />
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(60 100 100)" />
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(90 100 100)" />
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(120 100 100)" />
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(150 100 100)" />
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(180 100 100)" />
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(210 100 100)" />
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(240 100 100)" />
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(270 100 100)" />
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(300 100 100)" />
+    <rect x="92.5" y="28" width="15" height="20" rx="2" transform="rotate(330 100 100)" />
+  </g>
+
+  <circle cx="100" cy="100" r="50" fill="none" stroke="url(#cz-grad)" stroke-width="14" />
+
+  <path d="M76 121 V104 L84 88 L92 104 L100 88 L108 104 L116 88 L124 104 V121"
+        fill="none" stroke="url(#cz-grad)" stroke-width="8.5" stroke-linejoin="round" stroke-linecap="round" />
+
+  <path d="M82 112 H118" fill="none" stroke="#0e9f80" stroke-width="4" stroke-linecap="round" />
+  <g fill="#0e9f80">
+    <circle cx="88" cy="112" r="4" />
+    <circle cx="100" cy="112" r="4" />
+    <circle cx="112" cy="112" r="4" />
+  </g>
+</svg>
