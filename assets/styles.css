@@ -87,6 +87,8 @@ a:hover { color: #fff; }
   white-space: nowrap;
 }
 
+.brand-logo { width: 30px; height: 30px; flex: 0 0 auto; display: block; }
+
 .brand-mark {
   width: 26px;
   height: 26px;
