@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Схема: складская ячейка со стеллажами, роботом на линейных осях и мобильной тележкой">
+  <defs>
+    <linearGradient id="wh-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f7cff" stop-opacity="0.12" />
+      <stop offset="1" stop-color="#3f7cff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="640" height="400" fill="#0b1a30" />
+  <ellipse cx="300" cy="140" rx="230" ry="130" fill="url(#wh-glow)" />
+  <line x1="40" y1="356" x2="600" y2="356" stroke="#1b3153" stroke-width="2" />
+
+  <g fill="rgba(63,124,255,0.05)" stroke="#3f7cff" stroke-width="2.2" stroke-linejoin="round">
+    <rect x="64" y="64" width="272" height="248" rx="12" />
+  </g>
+
+  <g stroke="#1b3153" stroke-width="1.6">
+    <line x1="154" y1="64" x2="154" y2="312" />
+    <line x1="244" y1="64" x2="244" y2="312" />
+    <line x1="64" y1="126" x2="336" y2="126" />
+    <line x1="64" y1="188" x2="336" y2="188" />
+    <line x1="64" y1="250" x2="336" y2="250" />
+  </g>
+
+  <g stroke="#94a7c6" stroke-width="1.8" fill="none">
+    <rect x="78" y="92" width="60" height="22" rx="4" />
+    <rect x="168" y="92" width="60" height="22" rx="4" />
+    <rect x="258" y="92" width="60" height="22" rx="4" />
+    <rect x="78" y="154" width="60" height="22" rx="4" />
+    <rect x="168" y="154" width="60" height="22" rx="4" />
+    <rect x="258" y="154" width="60" height="22" rx="4" />
+    <rect x="78" y="216" width="60" height="22" rx="4" />
+    <rect x="168" y="216" width="60" height="22" rx="4" />
+    <rect x="258" y="216" width="60" height="22" rx="4" />
+    <rect x="78" y="278" width="60" height="22" rx="4" />
+    <rect x="168" y="278" width="60" height="22" rx="4" />
+    <rect x="258" y="278" width="60" height="22" rx="4" />
+  </g>
+
+  <g stroke="#3f7cff" stroke-width="2.2" fill="none" stroke-linecap="round">
+    <rect x="96" y="158" width="24" height="14" rx="3" />
+    <path d="M100 162 V168 M104 162 V168 M108 162 V168 M112 162 V168" stroke-width="1.2" />
+  </g>
+
+  <g stroke="#94a7c6" stroke-width="6" stroke-linecap="round">
+    <line x1="60" y1="336" x2="470" y2="336" />
+    <line x1="470" y1="104" x2="470" y2="336" />
+  </g>
+
+  <g stroke="#3f7cff" stroke-width="11" stroke-linecap="round" fill="none">
+    <path d="M470 260 L470 198" />
+    <path d="M470 198 L408 198" />
+  </g>
+
+  <g fill="#0b1a30" stroke="#3f7cff" stroke-width="2.4">
+    <circle cx="470" cy="198" r="8" />
+    <rect x="392" y="188" width="22" height="20" rx="4" />
+  </g>
+  <g stroke="#3f7cff" stroke-width="2.4" stroke-linecap="round">
+    <path d="M396 208 L396 220" />
+    <path d="M410 208 L410 220" />
+  </g>
+
+  <g fill="rgba(63,124,255,0.05)" stroke="#3f7cff" stroke-width="2.2" stroke-linejoin="round">
+    <rect x="512" y="300" width="92" height="36" rx="8" />
+  </g>
+  <g fill="#94a7c6">
+    <circle cx="530" cy="344" r="7" />
+    <circle cx="586" cy="344" r="7" />
+  </g>
+  <g stroke="#94a7c6" stroke-width="2" fill="none">
+    <rect x="524" y="288" width="30" height="12" rx="3" />
+    <rect x="562" y="288" width="30" height="12" rx="3" />
+  </g>
+
+  <g stroke="#1b3153" stroke-width="2" stroke-dasharray="7 7" fill="none">
+    <path d="M508 318 L430 318" />
+  </g>
+  <path d="M444 312 L430 318 L444 324" stroke="#1b3153" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

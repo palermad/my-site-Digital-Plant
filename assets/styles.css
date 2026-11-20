@@ -935,6 +935,124 @@ td { color: var(--muted); }
 .contact-social a.social-badge:hover { color: var(--accent-hi); transform: translateY(-1px); }
 .contact-social a.social-badge:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 50%; }
 
+/* ---------- robotics solutions ---------- */
+
+.sol-list { display: grid; gap: 22px; }
+
+.sol-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 30px;
+  align-items: center;
+  padding: 30px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.sol-card:hover { border-color: rgba(63, 124, 255, 0.45); transform: translateY(-2px); }
+
+.sol-body { min-width: 0; }
+
+.sol-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+
+.sol-num { font-size: 13px; font-weight: 600; letter-spacing: 0.16em; color: var(--accent); }
+
+.sol-type { font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+
+.sol-ugt {
+  margin-left: auto;
+  padding: 4px 10px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.sol-card h3 { margin: 0 0 10px; font-size: clamp(20px, 2.1vw, 25px); line-height: 1.25; }
+
+.sol-lead { margin: 0 0 16px; color: var(--muted); }
+
+.sol-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+
+.sol-chip { padding: 7px 12px; border: 1px solid var(--line); border-radius: 10px; font-size: 12.5px; color: var(--muted); }
+
+.sol-chip b { display: block; margin-bottom: 2px; font-size: 15px; font-weight: 600; color: var(--text); }
+
+.sol-points { display: grid; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; }
+
+.sol-points li { position: relative; padding-left: 18px; font-size: 14.5px; }
+
+.sol-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.sol-specs { padding-top: 14px; border-top: 1px solid var(--line); }
+
+.sol-specs summary { cursor: pointer; font-size: 13px; letter-spacing: 0.03em; color: var(--accent-hi); list-style: none; }
+.sol-specs summary::-webkit-details-marker { display: none; }
+.sol-specs summary::before { content: "+"; display: inline-block; width: 14px; }
+.sol-specs[open] summary::before { content: "–"; }
+.sol-specs summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+
+.spec-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px 18px;
+  margin: 14px 0 0;
+  font-size: 13.5px;
+}
+
+.spec-list dt { color: var(--muted); }
+.spec-list dd { margin: 0; text-align: right; }
+
+.sol-media {
+  padding: 10px;
+  background: rgba(63, 124, 255, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.sol-media img { display: block; width: 100%; height: auto; border-radius: 8px; }
+
+.platform-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+
+.platform-card { padding: 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
+
+.platform-card h3 { margin: 0 0 8px; font-size: 15.5px; }
+
+.platform-card p { margin: 0; font-size: 13.5px; color: var(--muted); }
+
+.sol-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
+
+.sol-fact { padding: 4px 0 4px 14px; border-left: 2px solid var(--accent); }
+
+.sol-fact b { display: block; font-size: 15px; }
+
+.sol-fact span { font-size: 13px; color: var(--muted); }
+
+@media (max-width: 1000px) {
+  .sol-card { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 22px; }
+  .sol-media { order: -1; }
+  .platform-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sol-facts { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .platform-grid { grid-template-columns: minmax(0, 1fr); }
+  .sol-ugt { display: none; }
+}
+
 /* ---------- motion ---------- */
 
 @media (prefers-reduced-motion: no-preference) {
