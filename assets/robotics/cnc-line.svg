@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Схема: два станка с ЧПУ, робот на станине, АРМ оператора и единая система управления">
+  <defs>
+    <linearGradient id="line-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f7cff" stop-opacity="0.12" />
+      <stop offset="1" stop-color="#3f7cff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="400" fill="#0b1a30" />
+  <ellipse cx="320" cy="150" rx="250" ry="130" fill="url(#line-glow)" />
+  <line x1="32" y1="352" x2="608" y2="352" stroke="#1b3153" stroke-width="2" />
+
+  <g fill="rgba(63,124,255,0.05)" stroke="#3f7cff" stroke-width="2.2" stroke-linejoin="round">
+    <rect x="40" y="150" width="150" height="176" rx="12" />
+    <rect x="450" y="130" width="150" height="196" rx="12" />
+  </g>
+
+  <g stroke="#94a7c6" stroke-width="2" fill="none" stroke-linejoin="round">
+    <rect x="58" y="176" width="76" height="70" rx="8" />
+    <circle cx="96" cy="200" r="18" />
+    <line x1="78" y1="256" x2="152" y2="256" />
+    <rect x="468" y="156" width="80" height="66" rx="8" />
+    <line x1="468" y1="236" x2="582" y2="236" />
+    <rect x="492" y="252" width="34" height="52" rx="6" />
+  </g>
+
+  <g fill="#94a7c6">
+    <circle cx="478" cy="164" r="2.6" />
+    <circle cx="488" cy="164" r="2.6" />
+    <circle cx="58" cy="310" r="2.6" />
+  </g>
+
+  <g stroke="#94a7c6" stroke-width="5" stroke-linecap="round">
+    <line x1="216" y1="334" x2="424" y2="334" />
+    <line x1="320" y1="212" x2="320" y2="334" />
+  </g>
+
+  <g stroke="#3f7cff" stroke-width="11" stroke-linecap="round" fill="none">
+    <path d="M320 250 L320 200" />
+    <path d="M320 200 L266 176" />
+    <path d="M266 176 L356 176" />
+  </g>
+
+  <g fill="#0b1a30" stroke="#3f7cff" stroke-width="2.4">
+    <circle cx="320" cy="200" r="8" />
+    <circle cx="266" cy="176" r="8" />
+    <circle cx="356" cy="176" r="8" />
+  </g>
+  <g stroke="#3f7cff" stroke-width="2.4" stroke-linecap="round" fill="none">
+    <path d="M349 188 L349 206" />
+    <path d="M363 188 L363 206" />
+  </g>
+
+  <g fill="rgba(63,124,255,0.05)" stroke="#3f7cff" stroke-width="2.2" stroke-linejoin="round">
+    <rect x="216" y="286" width="96" height="48" rx="8" />
+  </g>
+  <g stroke="#94a7c6" stroke-width="2" fill="none">
+    <rect x="230" y="296" width="42" height="26" rx="3" />
+    <line x1="284" y1="300" x2="284" y2="322" />
+  </g>
+
+  <g stroke="#94a7c6" stroke-width="2" fill="rgba(63,124,255,0.05)" stroke-linejoin="round">
+    <rect x="500" y="72" width="98" height="40" rx="8" />
+  </g>
+  <g stroke="#3f7cff" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M512 96 H546" />
+    <path d="M512 88 H534" />
+    <path d="M556 88 h26" />
+    <path d="M556 96 h26" />
+  </g>
+
+  <g stroke="#1b3153" stroke-width="1.8" stroke-dasharray="5 6" fill="none">
+    <path d="M190 200 L498 92" />
+    <path d="M450 160 L546 112" />
+    <path d="M264 286 L270 230" />
+  </g>
+</svg>
