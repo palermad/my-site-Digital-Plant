@@ -87,7 +87,7 @@ a:hover { color: #fff; }
   white-space: nowrap;
 }
 
-.brand-logo { width: 30px; height: 30px; flex: 0 0 auto; display: block; }
+.brand-logo { width: 42px; height: 42px; flex: 0 0 auto; display: block; }
 
 .brand-mark {
   width: 26px;
@@ -1068,6 +1068,7 @@ td { color: var(--muted); }
 }
 @media (max-width: 560px) {
   .sol-ugt { display: none; }
+  .brand-logo { width: 36px; height: 36px; }
 }
 
 /* ---------- motion ---------- */
