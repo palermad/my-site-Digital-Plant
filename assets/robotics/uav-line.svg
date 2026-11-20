@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Схема: конвейер сборки БПЛА с роботизированной тележкой, складом и системами управления">
+  <defs>
+    <linearGradient id="uav-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f7cff" stop-opacity="0.12" />
+      <stop offset="1" stop-color="#3f7cff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="400" fill="#0b1a30" />
+  <ellipse cx="320" cy="150" rx="250" ry="130" fill="url(#uav-glow)" />
+  <line x1="32" y1="356" x2="608" y2="356" stroke="#1b3153" stroke-width="2" />
+
+  <g fill="rgba(63,124,255,0.05)" stroke="#3f7cff" stroke-width="2.2" stroke-linejoin="round">
+    <rect x="120" y="286" width="300" height="26" rx="13" />
+  </g>
+  <g stroke="#94a7c6" stroke-width="2" fill="none">
+    <circle cx="150" cy="299" r="7" />
+    <circle cx="270" cy="299" r="7" />
+    <circle cx="390" cy="299" r="7" />
+  </g>
+
+  <g stroke="#3f7cff" stroke-width="2" fill="none">
+    <circle cx="176" cy="252" r="16" />
+    <circle cx="176" cy="252" r="5" />
+    <line x1="166" y1="242" x2="154" y2="230" />
+    <line x1="186" y1="242" x2="198" y2="230" />
+    <line x1="166" y1="262" x2="154" y2="274" />
+    <line x1="186" y1="262" x2="198" y2="274" />
+    <circle cx="152" cy="228" r="7" />
+    <circle cx="200" cy="228" r="7" />
+    <circle cx="152" cy="276" r="7" />
+    <circle cx="200" cy="276" r="7" />
+  </g>
+
+  <g stroke="#3f7cff" stroke-width="2" fill="none">
+    <circle cx="252" cy="252" r="16" />
+    <circle cx="252" cy="252" r="5" />
+    <line x1="242" y1="242" x2="230" y2="230" />
+    <line x1="262" y1="242" x2="274" y2="230" />
+    <line x1="242" y1="262" x2="230" y2="274" />
+    <line x1="262" y1="262" x2="274" y2="274" />
+    <circle cx="228" cy="228" r="7" />
+    <circle cx="276" cy="228" r="7" />
+    <circle cx="228" cy="276" r="7" />
+    <circle cx="276" cy="276" r="7" />
+  </g>
+
+  <g fill="rgba(63,124,255,0.05)" stroke="#3f7cff" stroke-width="2.2">
+    <rect x="330" y="236" width="76" height="50" rx="8" />
+  </g>
+  <g stroke="#94a7c6" stroke-width="1.8" fill="none">
+    <line x1="344" y1="252" x2="392" y2="252" />
+    <line x1="344" y1="266" x2="378" y2="266" />
+  </g>
+
+  <g fill="rgba(63,124,255,0.05)" stroke="#3f7cff" stroke-width="2.2">
+    <rect x="470" y="238" width="96" height="48" rx="8" />
+  </g>
+  <g fill="#94a7c6">
+    <circle cx="486" cy="298" r="7" />
+    <circle cx="550" cy="298" r="7" />
+  </g>
+
+  <g fill="rgba(63,124,255,0.05)" stroke="#3f7cff" stroke-width="2.2" stroke-linejoin="round">
+    <rect x="60" y="86" width="176" height="118" rx="10" />
+  </g>
+  <g stroke="#1b3153" stroke-width="1.6">
+    <line x1="60" y1="126" x2="236" y2="126" />
+    <line x1="60" y1="164" x2="236" y2="164" />
+    <line x1="118" y1="86" x2="118" y2="204" />
+    <line x1="176" y1="86" x2="176" y2="204" />
+  </g>
+  <g fill="#3f7cff" opacity="0.7">
+    <rect x="74" y="98" width="30" height="16" rx="3" />
+    <rect x="132" y="136" width="30" height="16" rx="3" />
+    <rect x="192" y="172" width="30" height="16" rx="3" />
+  </g>
+
+  <g fill="rgba(63,124,255,0.05)" stroke="#3f7cff" stroke-width="2.2">
+    <rect x="430" y="72" width="130" height="44" rx="8" />
+  </g>
+  <g stroke="#3f7cff" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M444 100 H494" />
+    <path d="M444 90 H474" />
+    <path d="M506 90 h40" />
+    <path d="M506 100 h40" />
+  </g>
+
+  <g stroke="#1b3153" stroke-width="1.8" stroke-dasharray="5 6" fill="none">
+    <path d="M292 232 L330 236" />
+    <path d="M406 260 L470 260" />
+    <path d="M238 150 L430 96" />
+  </g>
+</svg>
